@@ -13,3 +13,10 @@ class City(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class record(models.Model):
+    city = models.ForeignKey(City, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
